@@ -40,33 +40,21 @@ This workshop is divided into several activities:
 ## Tasks/Activities📄:-
 
 ### Activity 1: Variable Declaration
-
-- [ ] Task 1: Using var
-- [ ] Task 2: Using let
+- [X] Task 1: Using var
+- [X] Task 2: Using let
 
 
 ### Activity 2: Constant Declaration
-
-
-- [ ] Task 3: Using const
+- [X] Task 3: Using const
 
 
 ### Activity 3: Data Types
-
-
-- [ ] Task 4: Different data types
+- [X] Task 4: Different data types
 
 
 ### Activity 4: Reassigning Variables
-
-
-- [ ] Task 5: Reassigning let variables
+- [X] Task 5: Reassigning let variables
 
 
 ### Activity 5: Understanding `const`
-
-
-- [ ] Task 6: Attempting to reassign const variable
-
-
-Happy coding! 💻✨
+- [X] Task 6: Attempting to reassign const variable
