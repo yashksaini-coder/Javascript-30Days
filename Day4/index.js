@@ -28,8 +28,9 @@ console.log("Activity 2: ");
 
 sum = () => {
     let sum=0;
+    let i=1;
     while(i<=10){
-        sum +=i;
+        sum += i;
     }
     console.log(sum);
 }
@@ -48,6 +49,29 @@ print();
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 5: Write a program to print numbers from 1 to 5 using a do...while loop
+
+dowhile = () => {
+    do{
+        console.log(i);
+    }while(i<=5);
+}
+
+dowhile();
+
+
+// Task 6: Write a program to calculate the factorial of a number using a do...while loop
+
+factorial = (n) => {
+    let fact = 1;
+    do{
+        fact *= i;
+    }while(i<=n);
+    console.log(fact);
+}
+
+factorial(5);
 
 
 
