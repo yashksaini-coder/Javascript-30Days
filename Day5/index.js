@@ -62,6 +62,23 @@ console.log(contains("Hello", "a"));
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
 
+// Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
+
+function product(num1, num2 = 2){
+    return num1 * num2;
+}
+
+console.log(product(5,3));
+console.log(product(5));
+
+// Task 8: Write a function that takes a person's name and age and returns a greeting message. Provide a default value for the age.
+
+function greet(str, age = 18){
+    return "Hello " + str + ". You are " + age + " years old.";
+}
+
+console.log(greet("Deepanshu", 20));
+console.log(greet("Paras"));
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
