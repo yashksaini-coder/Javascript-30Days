@@ -44,6 +44,20 @@ console.log(concat("Hello", "World"));
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
 
+// Task 4: Write an arrow function to calculate the sum of two numbers and return the result.
+
+sum = (num1, num2) => num1 + num2;
+
+console.log(sum(2,3));
+
+// Task 5: Write an arrow function to check if a string contains a specific character and return a boolean value.
+
+contains = (str, char) => str.includes(char);
+
+console.log(contains("Hello", "e"));
+console.log(contains("Hello", "a"));
+
+
 
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
