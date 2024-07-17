@@ -82,3 +82,33 @@ console.log(greet("Paras"));
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+// Task 9: Write a higher-order function that takes a function and a number, and calls the function that many times.
+
+function repeat(func, num){
+    for (let i=0; i<num; i++){
+        func();
+    }
+}
+
+function print(){
+    console.log("Hello World");
+}
+
+repeat(print, 5);
+
+// Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
+
+function apply(func1, func2, value){
+    return func2(func1(value));
+}
+
+function double(num){
+    return num * 2;
+}
+
+function square(num){
+    return num * num;
+}
+
+console.log(apply(double, square, 5));
