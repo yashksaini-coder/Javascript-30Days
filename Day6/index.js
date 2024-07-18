@@ -33,8 +33,20 @@ console.log("The Array is:- "+arr);
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
 
+// Task 7: Use the `map` method to create a new array where each number is doubled and log the new array.
 
+let mapArr = arr.map((num) => num*2);
+console.log("The new mapped Array is:- "+mapArr);
 
+// Task 8: Use the `filter` method to create a new array with only even numbers and log the new array.
+
+let filterarr = arr.filter((num) => num%2 == 0);
+console.log("The new filtered Array is:- "+filterarr);
+
+// Task 9: Use the `reduce` method to calculate the sum of all numbers in the array and log the result.
+
+let reducearr = arr.reduce((acc, num) => acc+num, 0);
+console.log("The sum of all the numbers in the array is:- "+reducearr);
 
 
 console.log("-------------------------------------------------");
