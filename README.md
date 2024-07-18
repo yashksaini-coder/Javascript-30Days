@@ -19,7 +19,7 @@ To use the projects in this repository, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project folder you want to use.
-3. Follow the instructions provided in the project's README file.
+3. Follow the instructions provided in each Day Task README file.
 
 ## Author
 
