@@ -52,8 +52,29 @@ console.log("The sum of all the numbers in the array is:- "+reducearr);
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
 
+// Task 10: Use a `for` loop to iterate over the array and log each element to the console.
+console.log("Using for loop:- ");
+for(let i=0; i<arr.length; i++){
+    console.log("Element at index "+i+" is:- "+arr[i]);
+}
 
-
+// Task 11: Use the `forEach` method to iterate over the array and log each element to the console.
+console.log("Using forEach method:- ");
+arr.forEach((num, index) => {
+    console.log("Element at index "+index+" is:- "+num);
+});
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+// Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
+let matrix = [[1,2,3],
+            [4,5,6],
+            [7,8,9]];
+console.log("The Matrix is:- "+matrix);
+
+// Task 13: Access and log a specific element from the two-dimensional array.
+console.log("The element at 2nd row and 3rd column is:- "+matrix[1][2]);
+console.log("The element at 3rd row and 2nd column is:- "+matrix[2][1]);
+
+console.log("-------------------------------------------------");
