@@ -70,3 +70,34 @@ function product(a, b = 1) {
 }
 
 console.log(`Product of 5 and 2: ${product(5, 2)}`);
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
+
+// Task 8: Use enhanced object literals to create an object with methods and properties, and log the object to the console.
+
+let person = {
+    name: "Linus",
+    age: 30,
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+};
+
+person.greet();
+
+// Task 9: Create an object with computed property names based on variables and log the object to the console.
+
+const prop1 = "firstName";
+const prop2 = "lastName";
+const prop3 = "age";
+
+// Create an object with computed property names
+const details = {
+  [prop1]: "John",
+  [prop2]: "Doe",
+  [prop3]: 30
+};
+
+// Log the object to the console
+console.log(details);
