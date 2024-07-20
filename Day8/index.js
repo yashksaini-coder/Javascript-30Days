@@ -46,7 +46,7 @@ arr2 = [4, 5, 6];
 newarr = [...arr1, ...arr2];
 console.log(`New Array: ${newarr}`);
 
-// Use the rest operator in a function to accept an arbitrary number of arguments, sum them, and return the result.
+// Task 6: Use the rest operator in a function to accept an arbitrary number of arguments, sum them, and return the result.
 
 function sum(...theArgs) {
     let total = 0;
@@ -57,3 +57,16 @@ function sum(...theArgs) {
   }
 
 console.log(`Sum of 1, 2, 3, 4, 5: ${sum(1, 2, 3, 4, 5)}`);
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
+
+
+// Task 7: Write a function that takes two parameters and returns their product, with the second parameter having a default value of 1. Log the result of calling this function with and without the second parameter.
+
+function product(a, b = 1) {
+    return a * b;
+}
+
+console.log(`Product of 5 and 2: ${product(5, 2)}`);
