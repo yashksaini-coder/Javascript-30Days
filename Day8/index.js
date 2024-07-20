@@ -37,3 +37,23 @@ console.log(`Title: ${title}, Author: ${author}`);
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 5: Use the spread operator to create a new array that includes all elements of an existing array plus additional elements, and log the new array to the console.
+
+arr1 = [1, 2, 3];
+arr2 = [4, 5, 6];
+
+newarr = [...arr1, ...arr2];
+console.log(`New Array: ${newarr}`);
+
+// Use the rest operator in a function to accept an arbitrary number of arguments, sum them, and return the result.
+
+function sum(...theArgs) {
+    let total = 0;
+    for (const arg of theArgs) {
+      total += arg;
+    }
+    return total;
+  }
+
+console.log(`Sum of 1, 2, 3, 4, 5: ${sum(1, 2, 3, 4, 5)}`);
