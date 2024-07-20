@@ -51,27 +51,23 @@ console.log("Activity 2: ");
 // Task 3: Write a program to find the largest of three numbers using nested if-else statements.
 
 largest = (num1, num2, num3) => {
-    if(typeof num1 === "number" && typeof num2 === "number" && typeof num3 === "number"){
-        if(num1 > num2){
-            if(num1 > num3){
-                console.log(`The largest number is: ${num1}`);
-            }
-            else{
-                console.log(`The largest number is: ${num3}`);
-            }
+    if (num1 >= num2) {
+        if (num1 >= num3) {
+            largest = num1;
+        } else {
+            largest = num3;
         }
-        else{
-            if(num2 > num3){
-                console.log(`The largest number is: ${num2}`);
-            }
-            else{
-                console.log(`The largest number is: ${num3}`);
-            }
+    } else {
+        if (num2 >= num3) {
+            largest = num2;
+        } else {
+            largest = num3;
         }
     }
+    return largest;
 }
 console.log("Given numbers are: 1, 2, 3");
-largest(1, 2, 3);
+console.log("The largest number is:-"+largest(1, 2, 3));
 
 
 console.log("-------------------------------------------------");
