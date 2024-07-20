@@ -14,3 +14,26 @@ It is created using template literals.
 It is very convenient to use.`;
 console.log(`This is multiLineString:- ${multiLineString}`);
 
+
+console.log("-------------------------------------------------");
+console.log("Activity 2: ");
+
+// Task 3: Use array destructuring to extract the first and second elements from an array of numbers and log them to the console.
+
+arr = [1, 2, 3, 4, 5];
+let [first, second] = arr;
+console.log(`First element: ${first}, Second element: ${second}`);
+
+// Task 4: Use object destructuring to extract the title and author from a book object and log them to the console.
+
+let book = {
+    title: "The Alchemist",
+    author: "Paulo Coelho"
+};
+
+let {title, author} = book;
+console.log(`Title: ${title}, Author: ${author}`);
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 3: ");
