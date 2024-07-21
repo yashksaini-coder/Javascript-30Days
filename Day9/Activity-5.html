@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-5</title>
+</head>
+<body>
+    <!-- Add a click event listener to a button that changes the text content of a paragraph. -->
+    <p>This is a pragraph who's content is about to be changed once the function is called on the button click.</p>
+    <br>
+    <button onclick="changeText()">Change Text</button>
+    <script>
+        function changeText(){
+            var p = document.querySelector('p');
+            p.textContent = "This is a new paragraph content.";
+        }
+    </script>
+</body>
+</html>
