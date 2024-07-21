@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-3</title>
+</head>
+<body>
+    <!-- Select an HTML element and remove it from the DOM. -->
+    <p>This is a Standard HTML element</p>
+    <button onclick=remove()>Remove the HTML element</button>
+    
+    <!-- Remove the last child of a specific HTML element. -->
+    <ul>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+    </ul>
+    
+    <button onclick=removeLastChild()>Remove the last child of the list</button>
+    <script>
+        function remove() {
+            var element = document.querySelector('p');
+            element.remove();
+        }
+
+        function removeLastChild() {
+            var element = document.querySelector('ul');
+            element.removeChild(element.lastElementChild);
+        }
+    </script>
+</body>
+</html>
