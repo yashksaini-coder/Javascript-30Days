@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-2</title>
+    <style>
+        .button-container {
+            display: flex;
+        }
+        .button-container button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="createDiv()">Create Div</button>
+        <button onclick="createLi()">Create Li</button>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        // Create a new div element
+        function createDiv() {
+            var newDiv = document.createElement('div');
+            // Set its text content
+            newDiv.textContent = 'New Div Element';
+            // Append it to the body
+            document.body.appendChild(newDiv);
+        }
+
+        // Create a new li element
+        function createLi() {
+            var newLi = document.createElement('li');
+            // Set its text content
+            newLi.textContent = 'New Li Element';
+            // Append it to an existing ul list
+            document.querySelector('ul').appendChild(newLi);
+        }
+    </script>
+</body>
+</html>

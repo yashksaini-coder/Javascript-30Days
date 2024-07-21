@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-4</title>
+</head>
+<body>
+    <style>
+        .red {
+           background-color: red;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <!-- Select an HTML element and change one of its attributes (e.g., src of an img tag). -->
+    <div>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" id="googleLogo">
+    </div>
+    <button onclick="changeImage()">Change Image</button>
+    <!-- Add and remove a CSS class to/from an HTML element. -->
+    <div class="box">
+        <p>Click the button to add a class to this paragraph.</p>
+        <button onclick="document.querySelector('p').classList.add('red')">Add Class</button>
+    </div>
+    <script>
+        function changeImage() {
+            document.getElementById("googleLogo").src = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
+        }
+
+        function addClass() {
+            document.querySelector('p').classList.add('red');
+            document.querySelector('p').classList.remove('red');
+        }
+     </script>
+</body>
+</html>

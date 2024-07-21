@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-1</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+        }
+    </style>
+    <p id="myElement">Original Text</p>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+    
+    <div class="box">
+    </div>
+    <script>
+        // Select the element by its ID
+        var element = document.getElementById('myElement');
+        function changeText() {
+            // Change its text content
+            element.textContent = 'New Text Content';
+        }
+        function changeColor() {
+            var box = document.querySelector('.box');
+            box.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>
