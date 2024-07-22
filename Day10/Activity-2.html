@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-2</title>
+</head>
+<body>
+    <style>
+        .container{
+            padding: 15px;
+            border: 10px solid black;
+            color: red;
+            display: inline-flex;
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: rgb(138, 181, 28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div class="container">
+        <!-- Add a mouseover event listener to an element that changes its background color. -->
+        <div class="box">
+            <p>Hover over me!</p>
+        </div>
+
+        <br>
+        
+        <!-- Add a mouseout event listener to an element that resets its background color. -->
+        <div class="box2">
+            <p>Hover over me!</p>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.box').addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'lightgreen';
+        });
+
+        document.querySelector('.box2').addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'white';
+        });
+    </script>
+</body>
+</html>
