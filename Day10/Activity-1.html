@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-1</title>
+</head>
+<body>
+    <!-- Add a click event listener to a button that changes the text content of a paragraph. -->
+    <p>The Button is not clicked</p>
+    <button onclick="clicked()">Click Me!</button>
+    <br>
+    <br>
+    <!-- Add a double-click event listener to an image that toggles its visibility. -->
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" ondblclick="this.style.display = 'none'">
+    <script>
+        function clicked() {
+            document.querySelector('p').innerHTML = "The Button is clicked";
+        }
+    </script>
+</body>
+</html>
