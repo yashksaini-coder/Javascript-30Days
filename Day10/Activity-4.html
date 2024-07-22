@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+
+    <!-- Add a submit event listener to a form that prevents the default submission and logs the form data to the console. -->
+    <form action="" onsubmit="event.preventDefault(); console.log(event.target)">
+        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <input type="text" name="email" id="email" placeholder="Email"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <!-- Add a change event listener to a select dropdown that displays the selected value in a paragraph. -->
+    <select name="cars" id="cars" onchange="document.querySelector('p').textContent = event.target.value">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <p>The value is: <span id="selectedValue"></span></p>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            event.preventDefault();
+            console.log(event.target);
+        });
+
+        document.querySelector('select').addEventListener('change', function() {
+            document.querySelector('p').textContent = event.target.value;
+        });
+
+    </script>
+</body>
+</html>
