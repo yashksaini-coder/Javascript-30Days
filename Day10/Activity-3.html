@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-3</title>
+</head>
+<body>
+    <style>
+        .box {
+            width: 80px;
+            height: 50px;
+            left: 15%;
+            right: 15%;
+            text-size-adjust: 20px;
+            position: relative;
+            border: 5px solid black;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2 {
+            width: 80px;
+            height: 50px;
+            left: 15%;
+            right: 15%;
+            text-size-adjust: 20px;
+            position: relative;
+            border: 5px solid black;
+            background-color: rgb(17, 20, 227);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <!-- Add a keydown event listener to an input field that logs the key pressed to the console. -->
+    <h1>Here is the input field</h1><br>
+    <input type="text" onkeydown="console.log(event.key)"><br>
+    <h1>You pressed this key</h1><br>
+    <p class='box'></p><br>
+
+    <!-- Add a keyup event listener to an input field that displays the current value in a paragraph. -->
+    <h1>Here is the input field</h1><br>
+    <input type="text" onkeyup="console.log(event.key)"><br>
+    <h1>You pressed this key</h1><br>
+    <p class="box2"></p>
+    <script>
+        document.querySelector('input').addEventListener('keydown', function() {
+            document.querySelector('p').textContent = event.key;
+        });
+
+        document.querySelector('input').addEventListener('keyup', function() {
+            document.querySelector('.box2').textContent = event.target.value;
+        });
+    </script>
+</body>
+</html>
