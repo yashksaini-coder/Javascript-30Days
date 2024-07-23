@@ -18,11 +18,11 @@ const promise2 = new Promise((resolve, reject) => {
     let success = false;
     setTimeout(() => {
         if (!success) {
-            reject("Promise rejected after 2 seconds");
+            reject("Promise rejected after 3 seconds");
         } else {
-            resolve("Promise resolved after 2 seconds");
+            resolve("Promise resolved after 3 seconds");
         }
-    }, 2000);}  
+    }, 3000);}  
 );
 
 promise2.then((message) => {
@@ -41,19 +41,19 @@ console.log("Activity 2: ");
 const promise3 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("First data received from server");
-    }, 2000);
+    }, 3500);
 });
 
 const promise4 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Second data received from server");
-    }, 2000);
+    }, 3500);
 });
 
 const promise5 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Third data received from server");
-    }, 2000);
+    }, 3500);
 });
 
 promise3.then((message) => {
@@ -102,3 +102,54 @@ async function asyncFunc2(){
 }
 
 asyncFunc2();
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
+
+// Task 6: Use the `fetch` API to get data from a public API and log the response data to the console using promises.
+
+let promise9 = new Promise((resolve,reject) => {
+    setTimeout(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => {
+            resolve(data);
+        })
+        .catch(error => {
+            reject(error);
+        });
+    }, 6000);
+});
+
+promise9.then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.log(error);
+});
+
+// Task 7: Use the `fetch` API to get data from a public API and log the response data to the console using async-await.
+
+let promise10 = new Promise((resolve, reject) =>{
+    setTimeout(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => {
+            resolve(data);
+        })
+        .catch(error => {
+            reject(error);
+        });
+    }, 6500);
+});
+
+async function asyncFunc3(){
+    try{
+        let result = await promise10;
+        console.log(result);
+    } catch(error){
+        console.log(error);
+    }
+}
+
+asyncFunc3();
