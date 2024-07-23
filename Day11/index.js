@@ -154,55 +154,55 @@
 
 // asyncFunc3();
 
-console.log("-------------------------------------------------");
-console.log("Activity 5: ");
+// console.log("-------------------------------------------------");
+// console.log("Activity 5: ");
 
 // Task 8: Use `Promise.all` to wait for multiple promises to resolve and then log all their values.
 
-let promise11 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("First data received from server");
-    }, 3500);
-});
+// let promise11 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("First data received from server");
+//     }, 3500);
+// });
 
-let promise12 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Second data received from server");
-    }, 3500);
-});
+// let promise12 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Second data received from server");
+//     }, 3500);
+// });
 
-let promise13 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Third data received from server");
-    }, 3500);
-});
+// let promise13 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Third data received from server");
+//     }, 3500);
+// });
 
-Promise.all([promise11, promise12, promise13]).then((values) => {
-    console.log(values);
-});
+// Promise.all([promise11, promise12, promise13]).then((values) => {
+//     console.log(values);
+// });
 
 
 // Task 9: Use `Promise.race` to log the value of the first promise that resolves among multiple promises.
 
-let promise14 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("First data received from server");
-    }, 3500);
-});
+// let promise14 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("First data received from server");
+//     }, 3500);
+// });
 
-let promise15 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Second data received from server");
-    }, 3500);
-});
+// let promise15 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Second data received from server");
+//     }, 3500);
+// });
 
-let promise16 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Third data received from server");
-    }, 3500);
-});
+// let promise16 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Third data received from server");
+//     }, 3500);
+// });
 
 
-Promise.race([promise14, promise15, promise16]).then((value) => {
-    console.log(value);
-});
+// Promise.race([promise14, promise15, promise16]).then((value) => {
+//     console.log(value);
+// });
