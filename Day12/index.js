@@ -134,3 +134,25 @@ async function randomPromise() {
 }
 
 randomPromise();
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
+
+// Task 8: Use the fetch API to request data from an invalid URL and handle the error using .catch(). Log an appropriate error message to the console.
+
+fetch("https://jsonplaceholder.typicode.")
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log("Error: " + error));
+
+// Task 9: Use the fetch API to request data from an invalid URL within an async function and handle the error using try-catch. Log an appropriate error message.
+
+async function fetchData() {
+    try {
+      let response = await fetch("https://r.typicocom/posts");
+      let data = await response.json();
+      console.log(data);
+    } catch (error) {
+        console.log("Error: " + error);
+    }
+}
