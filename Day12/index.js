@@ -30,3 +30,17 @@ diverror();
 
 console.log("-------------------------------------------------");
 console.log("Activity 2: ");
+
+// Task 3: Write a script that includes a try-catch block and a finally block. Log messages in the try, catch, and finally blocks to observe the execution flow.
+try{
+    console.log("Start of try runs");
+    unicycle;
+    console.log("End of try runs");
+}catch(err){
+    console.log("Error has occured: " + err);
+}finally{
+    console.log("This is always run");
+}
+
+console.log("-------------------------------------------------");
+console.log("Activity 3: ");
