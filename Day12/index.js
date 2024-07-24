@@ -44,3 +44,47 @@ try{
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 4:  Create a custom error class that extends the built-in Error class. Throw an instance of this custom error in a function and handle it using a try-catch block.
+
+class CustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = this.constructor.name;
+  }
+}
+
+function customError() {
+  throw new CustomError("This is a custom error");
+}
+
+try {
+  customError();
+} catch (error) {
+  console.log(error.message);
+}   
+
+// Task 5: Write a function that validates user input (e.g., checking if a string is not empty) and throws a custom error if the validation fails. Handle the custom error using a try-catch block.
+
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = this.constructor.name;
+  }
+}   
+
+function validateInput(input) {
+    if (input === "") {
+        throw new ValidationError("Input cannot be empty");
+    }
+}
+
+try {
+    validateInput("");
+    console.log("Validating input...");
+}catch(error){
+    console.log(error.message);
+}
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
