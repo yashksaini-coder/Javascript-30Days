@@ -88,3 +88,49 @@ try {
 
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
+
+// Task 6: Create a promise that randomly resolves or rejects. Use .catch() to handle the rejection and log an appropriate message to the console.
+
+let promise = new Promise((resolve, reject) => {
+  let random = Math.random();
+  if (random < 0.5) {
+    resolve("Success");
+  } else {
+    reject("Error");
+  }
+});
+
+promise.then((message) => {
+    console.log(message);
+}).catch((error) => {
+    console.log(error);
+});
+
+
+// Task 7: Use try-catch within an async function to handle errors from a promise that randomly resolves or rejects, and log the error message.
+
+let promise2 = new Promise((resolve, reject) => {
+    let random = Math.random();
+    if (random < 0.5) {
+      resolve("Success");
+    } else {
+      reject("Error");
+    }
+});
+  
+promise2.then((message) => {
+    console.log(message);
+}).catch((error) => {
+    console.log(error);
+});
+
+async function randomPromise() {
+    try {
+      let result = await promise2;
+      console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+randomPromise();
