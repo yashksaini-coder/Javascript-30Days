@@ -73,3 +73,24 @@ module.exports = {
 
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
+
+// Task 6: Install a third-party module (e.g., lodash) using npm. Import and use a function from this module in a script.
+
+const _ = require('lodash');
+const arr = [1, 2, 3, 4, 5];
+console.log(_.sum(arr));
+
+// Task 7: Install a third-party module (e.g., axios) using npm. Import and use this module to make a network request in a script.
+
+const axios = require('axios');
+
+axios.get('https://jsonplaceholder.typicode.com/posts')
+.then(response => {
+    console.log(response.data);
+})
+.catch(error => {
+    console.log(error);
+});
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
