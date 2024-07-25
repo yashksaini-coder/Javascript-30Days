@@ -50,3 +50,26 @@ module.exports = subtract;
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 5: Create a module that exports multiple constants and functions. Import the entire module as an object in another script and use its properties.
+
+const PI = 3.14;
+const E = 2.71;
+
+function square(x) {
+    return x * x;
+}   
+
+function cube(x) {
+    return x * x * x;
+}
+
+module.exports = {
+    PI,
+    E,
+    square,
+    cube
+}
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
