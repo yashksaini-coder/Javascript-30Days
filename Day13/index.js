@@ -94,3 +94,50 @@ axios.get('https://jsonplaceholder.typicode.com/posts')
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+// Task 8: Use a module bundler like Webpack or Parcel to bundle multiple JavaScript files into a single file. Write a script to demonstrate the bundling process.
+
+
+// Webpack is used to bundle multiple JavaScript files into a single file.
+
+// Step 1: Install Webpack
+// npm install webpack webpack-cli --save-dev
+
+// Step 2: Create a webpack.config.js file
+
+// webpack.config.js
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js'
+    }
+};
+
+
+// Step 3: Create multiple JavaScript files to bundle
+
+// src/index.js
+
+import { add } from './add.js';
+const add = require('./add');
+
+console.log(add(2, 3));
+
+// src/add.js
+
+export function add(a, b) {
+    return a + b;
+}
+
+// Step 4: Run Webpack to bundle the files
+
+// npx webpack
+
+// Step 5: Run the bundled file
+
+// node dist/bundle.js
+
+// The output will be 5.
+
+console.log("-------------------------------------------------");
