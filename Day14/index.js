@@ -162,3 +162,36 @@ console.log(person5.fullName);
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+// Task 9: Define a class `Account` with private fields for balance and a method to deposit and withdraw money. Ensure that the balance can only be updated through these methods.
+
+class Account {
+    #balance = 0;
+
+    deposit(amount){
+        this.#balance += amount;
+    }
+
+    withdraw(amount){
+        if(amount <= this.#balance){
+            this.#balance -= amount;
+        } else {
+            console.log("Insufficient funds.");
+        }
+    }
+
+    getBalance(){
+        console.log(`Current balance: $${this.#balance}`);
+    }
+}
+
+// Task 10: Create an instance of the `Account` class and test the deposit and withdraw methods, logging the balance after each operation.
+
+const account = new Account();
+account.getBalance();
+account.deposit(100);
+account.getBalance();
+account.withdraw(50);
+account.getBalance();
+account.withdraw(100);
+account.getBalance();
