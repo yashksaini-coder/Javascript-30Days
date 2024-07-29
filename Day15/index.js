@@ -37,28 +37,37 @@ console.log(counter1.getCount());
 console.log("-------------------------------------------------");
 console.log("Activity 2: ");
 
-
-
-
-
-
-
-
-
-
-
-
-
-// Activity 2: Practical Closures
-
 // Task 3: Write a function that generates unique IDs. Use a closure to keep track of the last generated ID and increment it with each call.
+
+function generateID(){
+    let id = 0;
+    return function(){
+        id++;
+        return id;
+    };
+}
+
+const idGenerator = generateID();
+console.log(idGenerator());
+
 // Task 4: Create a closure that captures a user's name and returns a function that greets the user by name.
 
-// Activity 3: Closures in Loops
+function greetUser(name){
+    return function(){
+        console.log(`Hello, ${name}!`);
+    };
+}
+
+const greet = greetUser("John");
+greet();
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 3: ");
+
 
 // Task 5: Write a loop that creates an array of functions. Each function should log its index when called. Use a closure to ensure each function logs the correct index.
 
-// Activity 4: Module Pattern
 
 // Task 6: Use closures to create a simple module for managing a collection of items. Implement methods to add, remove, and list items.
 
