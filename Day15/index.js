@@ -118,4 +118,36 @@ console.log("-------------------------------------------------");
 console.log("Activity 5: ");
 
 // Task 7: Write a function that memoizes the results of another function. Use a closure to store the results of previous computations.
+
+function memoize(func){
+    const cache = {};
+    return function(n){
+        if(cache[n] === undefined){
+            cache[n] = func(n);
+        }
+        return cache[n];
+    };
+}
+
+function factorial(n){
+    if(n === 0){
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+const memoizedFactorial = memoize(factorial);
+console.log(memoizedFactorial(5));
+
 // Task 8: Create a memoized version of a function that calculates the factorial of a number.
+
+function memoizeFactorial(n){
+    if(n === 0){
+        return 1;
+    }
+    return n * memoizeFactorial(n - 1);
+}
+
+const memoizedFactorial1 = memoize(memoizeFactorial);
+console.log(memoizedFactorial1(5));
+
