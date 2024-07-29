@@ -87,7 +87,35 @@ console.log("Activity 4: ");
 
 // Task 6: Use closures to create a simple module for managing a collection of items. Implement methods to add, remove, and list items.
 
-// Activity 5: Memoization
+function createModule(){
+    const items = [];
+    return {
+        add: function(item){
+            items.push(item);
+        },
+        remove: function(index){
+            items.splice(index, 1);
+        },
+        list: function(){
+            return items;
+        }
+    };
+}
+
+// const module = createModule();
+// module.add("Apple");
+// module.add("Banana");
+// module.add("Cherry");
+// console.log(module.list());
+// module.remove
+// module.remove
+// module.remove
+// console.log(module.list());
+console.log("Completed Actviity-4");
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
 
 // Task 7: Write a function that memoizes the results of another function. Use a closure to store the results of previous computations.
 // Task 8: Create a memoized version of a function that calculates the factorial of a number.
