@@ -115,3 +115,50 @@ console.log(`Total number of students: ${Student3.totalStudents}`);
 
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
+
+
+// Task 7: Add a getter method to the `Person` class to return the full name (assume a `firstName` and `lastName` property). Create an instance and log the full name using the getter.
+
+class Person4 {
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}   
+
+const person4 = new Person4("John", "Doe");
+console.log(person4.fullName);
+
+// Task 8: Add a setter method to the `Person` class to update the name properties (`firstName` and `lastName`). Update the name using the setter and log the updated full name.
+
+class Person5 {        
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    set fullName(name){
+        const parts = name.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+}   
+
+const person5 = new Person5("John", "Doe");
+console.log(person5.fullName);
+
+console.log("Updating name...");
+
+person5.fullName = "Jane Smith";
+console.log(person5.fullName);
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
