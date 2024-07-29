@@ -75,3 +75,43 @@ student2.greet();
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 5: Add a static method to the `Person` class that returns a generic greeting message. Call this static method without creating an instance of the class and log the message.
+
+class Person3 {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    greet() {
+      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+
+    static genericGreet(){
+        console.log("Hello, nice to meet you!");
+    }
+}   
+
+Person3.genericGreet();
+
+// Task 6: Add a static property to the `Student` class to keep track of the number of students created. Increment this property in the constructor and log the total number of students.
+
+class Student3 extends Person{
+    static totalStudents = 0;
+    constructor(name, age, studentId){
+        super(name, age);
+        this.studentId = studentId;
+        Student3.totalStudents++;
+    }
+
+    getStudentId(){
+        console.log(`Student ID: ${this.studentId}`);
+    }
+}       
+
+const student3 = new Student3("John", 25, 12345);
+
+console.log(`Total number of students: ${Student3.totalStudents}`);
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
