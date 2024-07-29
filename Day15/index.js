@@ -68,6 +68,22 @@ console.log("Activity 3: ");
 
 // Task 5: Write a loop that creates an array of functions. Each function should log its index when called. Use a closure to ensure each function logs the correct index.
 
+function createFunctions(n){
+    const functions = [];
+    for(let i = 0; i < n; i++){
+        functions.push(function(){
+            console.log(i);
+        });
+    }
+    return functions;
+}
+
+const functions = createFunctions(3);
+functions.forEach(func => func());
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
 
 // Task 6: Use closures to create a simple module for managing a collection of items. Implement methods to add, remove, and list items.
 
