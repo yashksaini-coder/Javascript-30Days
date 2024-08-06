@@ -1,7 +1,9 @@
-# 30DaysJavascript
-# 30 Days of JavaScript Challenge
+<div align="center" height="320" width="640" style="border: 4px solid #fff; border-radius: 10px;">
+<img src="https://socialify.git.ci/yashksaini-coder/Javascript-30Days/image?description=1&font=Jost&forks=1&issues=1&language=1&name=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto" alt="Javascript-30Days" />
+</div>
+<br>
 
-Welcome to the 30 Days of JavaScript Challenge! This repository contains projects created during the challenge.
+### Welcome to the 30 Days of JavaScript Challenge! This repository contains projects created during the challenge.
 
 ## Contribution Guide
 
