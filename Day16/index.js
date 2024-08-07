@@ -86,6 +86,3 @@ function countOccurrences(arr, target, n) {
 }
 
 console.log(countOccurrences([1, 2, 3, 4, 5, 4, 3, 2, 1], 3, 8)); // 2
-
-console.log("-------------------------------------------------");
-console.log("Activity 5: ");
