@@ -86,3 +86,46 @@ function countOccurrences(arr, target, n) {
 }
 
 console.log(countOccurrences([1, 2, 3, 4, 5, 4, 3, 2, 1], 3, 8)); // 2
+
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
+
+// Task 9: Write a recursive function to perform an in-order traversal of a binary tree. Log the nodes as they are visited.
+
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}   
+
+function inOrderTraversal(node) {
+    if (node !== null) {
+        inOrderTraversal(node.left);
+        console.log(node.data);
+        inOrderTraversal(node.right);
+    }
+}
+
+let root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+
+inOrderTraversal(root); // 4 2 5 1 3
+
+// Task 10: Write a recursive function to calculate the depth of a binary tree. Log the result for a few test cases.
+
+function maxDepth(node) {
+    if (node === null) return 0;
+    let leftDepth = maxDepth(node.left);
+    let rightDepth = maxDepth(node.right);
+    return Math.max(leftDepth, rightDepth) + 1;
+}
+
+console.log(maxDepth(root)); // 3
+
+console.log("-------------------------------------------------");
