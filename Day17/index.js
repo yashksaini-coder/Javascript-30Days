@@ -271,3 +271,73 @@ binaryTree.inOrderTraversal(binaryTree.root);
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+//Task 9: Implement a Graph class with methods to add vertices, add edges, and perform a breadth-first search (BFS).
+
+class Graph {
+    constructor() {
+        this.vertices = [];
+        this.edges = {};
+    }
+
+    addVertex(vertex) {
+        this.vertices.push(vertex);
+        this.edges[vertex] = [];
+    }
+
+    addEdge(vertex1, vertex2) {
+        this.edges[vertex1].push(vertex2);
+        this.edges[vertex2].push(vertex1);
+    }
+
+    bfs(startingVertex) {
+        const visited = {};
+        const queue = [startingVertex];
+        visited[startingVertex] = true;
+        while (queue.length > 0) {
+            const currentVertex = queue.shift();
+            console.log(currentVertex);
+            for (let i = 0; i < this.edges[currentVertex].length; i++) {
+                const neighbor = this.edges[currentVertex][i];
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.push(neighbor);
+                }
+            }
+        }
+    }
+}
+
+const graph = new Graph();
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+graph.addVertex("F");
+graph.addVertex("G");
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("B", "D");
+graph.addEdge("B", "E");
+graph.addEdge("C", "F");
+graph.addEdge("C", "G");
+graph.bfs("A");
+
+
+// Task 10: Use the Graph class to represent a simple network and perform BFS to find the shortest path between two nodes.
+
+const network = new Graph();
+network.addVertex("Router");
+network.addVertex("Switch");
+network.addVertex("Server");
+network.addVertex("Laptop");
+network.addVertex("Printer");
+network.addVertex("Smartphone");
+network.addVertex("Tablet");
+network.addEdge("Router", "Switch");
+network.addEdge("Router", "Server");
+network.addEdge("Switch", "Laptop");
+network.bfs("Router");
+
+console.log("-------------------------------------------------");
