@@ -139,3 +139,52 @@ console.log(reverseString("Hello World!"));
 
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
+
+// Task 5: Implement a Queue class with methods enqueue (add element), dequeue (remove element), and front (view the first element).
+
+class Queue {
+    constructor() {
+        this.queue = [];
+    }
+
+    enqueue(value) {
+        this.queue.push(value);
+    }
+
+    dequeue() {
+        return this.queue.shift();
+    }
+
+    front() {
+        return this.queue[0];
+    }
+}
+
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+queue.enqueue(5);
+console.log(queue.front());
+console.log(queue.dequeue());
+console.log(queue.dequeue());
+console.log(queue.front());
+
+
+// Task 6: Use the Queue class to simulate a simple printer queue where print jobs are added to the queue and processed in order.
+
+function printerQueue(jobs) {
+    const queue = new Queue();
+    for (let i = 0; i < jobs.length; i++) {
+        queue.enqueue(jobs[i]);
+    }
+    while (queue.queue.length > 0) {
+        console.log("Processing job: " + queue.dequeue());
+    }
+}
+
+printerQueue(["Job 1", "Job 2", "Job 3", "Job 4", "Job 5"]);
+
+console.log("-------------------------------------------------");
+console.log("Activity 4: ");
