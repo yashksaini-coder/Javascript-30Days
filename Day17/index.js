@@ -188,3 +188,86 @@ printerQueue(["Job 1", "Job 2", "Job 3", "Job 4", "Job 5"]);
 
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
+
+// Task 7: Implement a TreeNode class to represent a node in a binary tree with properties value, left, and right.
+
+class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+const nodeA = new TreeNode("A");
+const nodeB = new TreeNode("B");
+const nodeC = new TreeNode("C");
+const nodeD = new TreeNode("D");
+const nodeE = new TreeNode("E");
+const nodeF = new TreeNode("F");
+const nodeG = new TreeNode("G");
+nodeA.left = nodeB;
+nodeA.right = nodeC;
+nodeB.left = nodeD;
+nodeB.right = nodeE;
+nodeC.left = nodeF;
+nodeC.right = nodeG;
+console.log(nodeA);
+console.log(nodeB);
+console.log(nodeC);
+console.log(nodeD);
+console.log(nodeE);
+console.log(nodeF);
+console.log(nodeG);
+
+
+// Task 8: Implement a BinaryTree class with methods for inserting values and performing in-order traversal to display nodes.
+
+class BinaryTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(value) {
+        const newNode = new TreeNode(value);
+        if (!this.root) {
+            this.root = newNode;
+        } else {
+            let current = this.root;
+            while (true) {
+                if (value < current.value) {
+                    if (!current.left) {
+                        current.left = newNode;
+                        return;
+                    }
+                    current = current.left;
+                } else {
+                    if (!current.right) {
+                        current.right = newNode;
+                        return;
+                    }
+                    current = current.right;
+                }
+            }
+        }
+    }
+
+    inOrderTraversal(node) {
+        if (node) {
+            this.inOrderTraversal(node.left);
+            console.log(node.value);
+            this.inOrderTraversal(node.right);
+        }
+    }
+}
+
+const binaryTree = new BinaryTree();
+binaryTree.insert(5);
+binaryTree.insert(3);
+binaryTree.insert(7);
+binaryTree.insert(2);
+
+binaryTree.inOrderTraversal(binaryTree.root);
+
+console.log("-------------------------------------------------");
+console.log("Activity 5: ");
