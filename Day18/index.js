@@ -159,5 +159,54 @@ console.log("Longest Substring: ", longestSubstring(str2));
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
 
+// Task 8: Write a function to rotate an array by k positions. Log the rotated array.
+
+const rotateArray = (arr, k) => {
+    k = k % arr.length;
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result.push(arr[(i + k) % arr.length]);
+    }
+    return result;
+}
+
+let arr6 = [4, 2, 9, 5, 1, 3, 6, 8, 7];
+let k = 3;
+console.log("Rotate Array: ", rotateArray(arr6, k));
+
+// Task 9: Write a function to merge two sorted arrays into one sorted array. Log the merged array.
+
+const mergeArrays = (arr1, arr2) => {
+    let result = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            result.push(arr1[i]);
+            i++;
+        } else {
+            result.push(arr2[j]);
+            j++;
+        }
+    }
+
+    while (i < arr1.length) {
+        result.push(arr1[i]);
+        i++;
+    }
+
+    while (j < arr2.length) {
+        result.push(arr2[j]);
+        j++;
+    }
+
+    return result;
+}
+
+let arr7 = [1, 3, 5, 7];
+let arr8 = [2, 4, 6, 8];
+console.log("Merge Arrays: ", mergeArrays(arr7, arr8));
+
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
