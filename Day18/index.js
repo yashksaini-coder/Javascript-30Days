@@ -210,3 +210,42 @@ console.log("Merge Arrays: ", mergeArrays(arr7, arr8));
 
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
+
+// Task 10: Write a function to solve the Fibonacci sequence using dynamic programming. Log the Fibonacci numbers.
+
+const fibonacci = (n) => {
+    let fib = [0, 1];
+    for (let i = 2; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib;
+}
+
+let n = 10;
+console.log("Fibonacci: ", fibonacci(n));
+
+//  Task 11: Write a function to solve the knapsack problem using dynamic programming. Log the maximum value that can be obtained.
+
+const knapsack = (weights, values, capacity) => {
+    let n = weights.length;
+    let dp = Array(n + 1).fill().map(() => Array(capacity + 1).fill(0));
+
+    for (let i = 1; i <= n; i++) {
+        for (let w = 1; w <= capacity; w++) {
+            if (weights[i - 1] <= w) {
+                dp[i][w] = Math.max(values[i - 1] + dp[i - 1][w - weights[i - 1]], dp[i - 1][w]);
+            } else {
+                dp[i][w] = dp[i - 1][w];
+            }
+        }
+    }
+
+    return dp[n][capacity];
+}
+
+let weights = [2, 3, 4, 5];
+let values = [3, 4, 5, 6];
+let capacity = 5;
+console.log("Knapsack: ", knapsack(weights, values, capacity));
+
+console.log("-------------------------------------------------");
