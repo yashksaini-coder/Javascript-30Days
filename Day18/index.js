@@ -118,6 +118,44 @@ console.log("Binary Search: ", binarySearch(arr5, target2));
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
 
+// Write a function to count the occurrences of each character in a string. Log the character counts.
+
+const countCharacters = (str) => {
+    let charCount = {};
+    for (let char of str) {
+        if (charCount[char]) {
+            charCount[char]++;
+        } else {
+            charCount[char] = 1;
+        }
+    }
+    return charCount;
+}
+
+let str = "hello";
+console.log("Character Count: ", countCharacters(str));
+
+//  Task 7: Write a function to find the longest substring without repeating characters in a string. Log the length of the substring.
+
+const longestSubstring = (str) => {
+    let longest = 0;
+    let start = 0;
+    let charIndex = {};
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (charIndex[char] >= start) {
+            start = charIndex[char] + 1;
+        }
+        charIndex[char] = i;
+        longest = Math.max(longest, i - start + 1);
+    }
+    return longest;
+}
+
+let str2 = "abcabcbb";
+console.log("Longest Substring: ", longestSubstring(str2));
+
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
 
