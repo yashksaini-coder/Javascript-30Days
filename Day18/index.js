@@ -75,6 +75,46 @@ console.log("Quick Sort: ", quickSort(arr3));
 console.log("-------------------------------------------------");
 console.log("Activity 2: ");
 
+// Task 4: Implement the linear search algorithm to find a target value in an array. Log the index of the target value.
+
+const linearSearch = (arr, target) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+let arr4 = [64, 34, 25, 12, 22, 11, 90];
+let target = 22;
+
+console.log("Linear Search: ", linearSearch(arr4, target));
+
+// Task 5: Implement the binary search algorithm to find a target value in a sorted array. Log the index of the target value.
+
+const binarySearch = (arr, target) => {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+
+let arr5 = [11, 12, 22, 25, 34, 64, 90];
+let target2 = 22;
+
+console.log("Binary Search: ", binarySearch(arr5, target2));
+
 console.log("-------------------------------------------------");
 console.log("Activity 3: ");
 
