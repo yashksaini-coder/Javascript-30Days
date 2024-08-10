@@ -82,6 +82,20 @@ console.log(matches);
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
 
+// Task 9: Write a regular expression to validate a simple password (must include at least one uppercase letter, one lowercase letter, one digit, and one special character). Log whether the password is valid.
 
+pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+let password = "Password@123";
+let isValid = pattern.test(password);
+
+console.log(isValid);
+
+//  Task 10: Write a regular expression to validate a URL. Log whether the URL is valid.
+
+pattern = /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+)\.([a-zA-Z]{2,})(\/[a-zA-Z0-9-]+)*\/?$/;
+let url = "https://www.google.com";
+isValid = pattern.test(url);
+
+console.log(isValid);
 
 console.log("-------------------------------------------------");
