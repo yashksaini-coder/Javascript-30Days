@@ -62,6 +62,21 @@ console.log(matches);
 console.log("-------------------------------------------------");
 console.log("Activity 4: ");
 
+// Task 7: Write a regular expression to match a word only if it is at the beginning of a string. Log the matches.
+
+pattern = /\b\w+/g;
+str = "Hello, World!";
+matches = str.match(pattern);
+
+console.log(matches);
+
+// Task 8: Write a regular expression to match a word only if it is at the end of a string. Log the matches.
+
+pattern = /\w+\b/g;
+str = "The quick brown fox jumps over the lazy dog.";
+matches = str.match(pattern);
+
+console.log(matches);
 
 
 console.log("-------------------------------------------------");
