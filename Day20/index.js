@@ -72,6 +72,34 @@ console.log("\nTask Completed!");
 console.log("-------------------------------------------------");
 console.log("Activity 5: ");
 
+function saveToStorage(key, value) {
+    // Save to localStorage
+    localStorage.setItem(key, value);
+    // Save to sessionStorage
+    sessionStorage.setItem(key, value);
 
+    // Retrieve and log the values from both storage mechanisms
+    const localStorageValue = localStorage.getItem(key);
+    const sessionStorageValue = sessionStorage.getItem(key);
+
+    console.log(`Value from localStorage: ${localStorageValue}`);
+    console.log(`Value from sessionStorage: ${sessionStorageValue}`);
+}
+
+// Example usage
+saveToStorage('username', 'Yash K. Saini');
+
+function clearAllStorage() {
+    // Clear all data from localStorage
+    localStorage.clear();
+    // Clear all data from sessionStorage
+    sessionStorage.clear();
+
+    // Verify that both storages are empty
+    console.log('localStorage after clear:', JSON.stringify(localStorage, null, 2));
+    console.log('sessionStorage after clear:', JSON.stringify(sessionStorage, null, 2));
+}
+
+// clearAllStorage(); This will clear all the data from both localStorage and sessionStorage
 
 console.log("-------------------------------------------------");
