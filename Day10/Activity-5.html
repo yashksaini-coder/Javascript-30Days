@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-5</title>
+</head>
+<body>
+    <!-- Add a click event listener to a list that logs the text content of the clicked list item using event delegation. -->
+    <ul>
+        <li onclick="handleClick(event)">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- Add an event listener to a parent element that listens for events from dynamically added child elements. -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <script>
+        document.querySelector('ul').addEventListener('click', function handleClick(event) {
+            console.log(event.target.textContent);
+        });
+
+        // Add an event listener to a parent element that listens for events from dynamically added child elements.
+        document.querySelector('ol').addEventListener('click', function handleClick(event) {
+            if (event.target.tagName === 'LI') {
+                console.log(event.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
