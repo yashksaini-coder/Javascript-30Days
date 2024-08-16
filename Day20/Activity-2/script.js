@@ -11,19 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+displaySavedData();
+
+document.getElementById('userForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    const userData = { name, email };
+    localStorage.setItem('userData', JSON.stringify(userData));
+
     displaySavedData();
+});
 
-    document.getElementById('userForm').addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-
-        const userData = { name, email };
-        localStorage.setItem('userData', JSON.stringify(userData));
-
-        displaySavedData();
-    });
 // Task 4: Write a script to remove an item from localStorage. Log the localStorage content before and after removal.
 
     function removeItemFromLocalStorage(key) {
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(localStorage.getItem(key));
     }
 
-    document.getElementById('removeButton').addEventListener('click', () => {
+    document.getElementById('removeData').addEventListener('click', () => {
         removeItemFromLocalStorage('userData');
         displaySavedData(); // Update the displayed data after removal
     });
