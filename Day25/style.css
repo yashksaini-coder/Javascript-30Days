@@ -1,0 +1,29 @@
+#movies img,
+#movie img {
+    width: 100%;
+}
+
+@media (min-width: 960px) {
+    #movies .col-md-3 .card {
+        height: 390px;
+    }
+
+    #movies .col-md-3 img {
+        height: 290px;
+    }
+}
+
+html {
+    --s: 94px; /* control the size*/
+    --c1: #384670;
+    --c2: #d86e4b;
+    
+    --g:var(--c1) 0 25%,var(--c2) 0 50%,#0000 0;
+    background: 
+      conic-gradient(from 135deg at 25% 75%, var(--g)) 
+       calc(var(--s)/4) calc(var(--s)/-4), 
+      conic-gradient(from -45deg at 75% 25%, var(--g))
+       calc(var(--s)/-4) calc(var(--s)/4), 
+      repeating-conic-gradient(var(--g));
+    background-size: var(--s) var(--s);
+  }
